@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js",
-    "dev": "webpack -d --watch",
-    "prod": "webpack -p"
+    "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js",
+    "dev": "node_modules/.bin/webpack -d --watch --config webpack.config.js",
+    "prod": "node_modules/.bin/webpack -p --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "raw-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^1.0.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.1"
   },

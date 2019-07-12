@@ -1,5 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 // const _cleanwebpackplugin = require('clean-webpack-plugin');
 // const CleanWebpackPlugin = _cleanwebpackplugin.CleanWebpackPlugin;
@@ -39,6 +40,7 @@ module.exports = {
             excludeChunks:['app.bundle']
         }),
         new ExtractTextPlugin('style.css'),
+        new UglifyJsPlugin(),
         new CleanWebpackPlugin()
     ],
     module: {
